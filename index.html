@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://kit.fontawesome.com/4c3802b9e6.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!--Section con título y botones--->
+  <header>
+    <!-- <div class="container-logo"><img class="img-logo" src="imagenes/logopompeya-01.png" alt=""></div>--->
+    <h1>Generador de Memes</h1>
+    <div class="container-btn">
+      <div id="btn-one">
+        <i class="fa-solid fa-palette"></i>
+        <button>Imagen</button>
+      </div>
+      <div id="btn-two">
+        <i class="fa-solid fa-pencil"></i>
+        <button>Texto</button>
+      </div>
+      <div id="btn-three">
+        <i class="fa-solid fa-eye"></i>
+
+        <button id="btn">Modo claro</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="center-section">
+  <!--Segunda seccion Texto e Imagen--->
+  <section class="section-edition">
+    <div id="memeId" class="meme">
+      <p>TOP TEXT</p>
+
+      <div id="contain-img">
+        <img src="" alt="" id="img-meme" />
+      </div>
+
+      <p>BOTTOM TEXT</p>
+    </div>
+
+    <div class="download"><button id="btn-download" class="colorButtons">Descargá tu meme</button></div>
+  </section>
+</div>
+  <!-- aside--->
+
+  <aside class="section-filters-url">
+    <h2>IMAGEN</h2>
+
+    <div>
+      <h3>URL</h3>
+      <input type="text" id="url" />
+    </div>
+    <!--fin div url-->
+
+    <div>
+      <h3>Fondo</h3>
+      <label for="color"></label>
+      <input type="color" id="color" name="color" />
+
+      <select name="select">
+        <option>Ninguno</option>
+        <option id="option-dos" value="clarify">Aclarar</option>
+        <option value="darken">Oscurecer</option>
+        <option value="difference">Diferencia</option>
+        <option value="shine">Luminocidad</option>
+        <option value="multiply">Multiplicar</option>
+      </select>
+    </div>
+    <!--fin div Fondo-->
+
+    <div>
+      <h3>Filtros</h3>
+
+      <div class="filters-flex">
+        <label for="brigthness">
+          <p>Brillo</p>
+        </label>
+        <input type="range" id="brigthness" min="0" max="1" value="1" step="0.1" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="opacityInput">
+          <p>Opacidad</p>
+        </label>
+        <input type="range" id="opacityInput" min="0" max="100" value="100" step="0.1" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="contraste">
+          <p>Contraste</p>
+        </label>
+        <input type="range" id="contraste" min="100" max="500" value="100" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="blur">
+          <p>Desenfoque</p>
+        </label>
+        <input type="range" id="blur" min="0" max="10" value="0" step="0.1" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="gray-scale">
+          <p>Escala de grises</p>
+        </label>
+        <input type="range" id="gray-scale" min="0" max="100" value="0" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="sepia">
+          <p>Sepia</p>
+        </label>
+        <input type="range" id="sepia" min="0" max="100" value="0" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="hue">
+          <p>Hue</p>
+        </label>
+        <input type="range" id="hue" min="0" max="360" value="0" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="saturate">
+          <p>Saturado</p>
+        </label>
+        <input type="range" id="saturate" min="0" max="200" value="100" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="negative">
+          <p>Negativo</p>
+        </label>
+        <input type="range" id="negative" min="0" max="100" value="0" />
+      </div>
+
+      <div class="btn-aside-uno">
+        <button id="restart">Reestablecer filtros</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
