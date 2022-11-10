@@ -143,11 +143,11 @@ h2 {
 }
 
 h3 {
-  margin: 10px 0px;
+ margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 15px;
   color: white;
-  padding: 10px;
+  padding: 5px;
 }
 
 #url {
@@ -158,7 +158,8 @@ h3 {
 }
 
 input[type=text] {
-  padding: 12px;
+  padding: 6px;
+  margin-bottom: 15px;
   font-size: 18px;
   border-width: 10px;
   border-color: #626363;
@@ -225,7 +226,56 @@ input[type="range"] {
   border-radius: 10px;
 }
 
+/*aside 2*/
 
+.aside-text {
+  width: 20%;
+  padding: 10px;
+}
+.container-inputs-flex {
+  display: flex;
+  margin: 20px 0px;}
+
+.check-text{
+  color: white;
+}
+
+input[type="number"] {
+  padding: 6px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-width: 10px;
+  border-color: #626363;
+  background-color: #3f3f3f;
+  color: #0e8696;
+  border-style: hidden;
+  border-radius: 50px;
+  box-shadow: 0px 0px 2px rgba(225,225,225,.11);
+  text-shadow: -4px 3px 5px rgba(23,17,0,.75);
+}
+
+.container-input-round-color{
+  margin-right: 15%;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+ width: 70px;
+ height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 15px;
+  border: none;
+}
+
+
+/*---*/
 .colorHeader {
   background-color: rgb(224, 224, 224);
 }
