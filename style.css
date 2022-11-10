@@ -24,7 +24,6 @@ h1 {
   color: white;
 }
 
-
 header {
   width: 100%;
   display: flex;
@@ -84,7 +83,7 @@ header div div i {
 }
 
 #contain-img {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 300px;
@@ -116,7 +115,7 @@ header div div i {
 
 #btn-download {
   font-size: 18px;
-  
+
   color: white;
   background-color: transparent;
   border: none;
@@ -143,7 +142,7 @@ h2 {
 }
 
 h3 {
- margin-bottom: 10px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 15px;
   color: white;
@@ -153,23 +152,22 @@ h3 {
 #url {
   width: 100%;
   height: 35px;
-  background-color:rgba(225,225,225,.11);
+  background-color: rgba(225, 225, 225, 0.11);
   padding: 5px 10px;
 }
 
-input[type=text] {
+input[type="text"] {
   padding: 6px;
   margin-bottom: 15px;
   font-size: 18px;
   border-width: 10px;
   border-color: #626363;
-  background-color: #3f3f3f;
+  background-color: rgba(225, 225, 225, 0.11);
   color: #0e8696;
   border-style: hidden;
   border-radius: 50px;
-  box-shadow: 0px 0px 2px rgba(225,225,225,.11);
-  text-shadow: -4px 3px 5px rgba(23,17,0,.75);
-
+  box-shadow: 0px 0px 2px rgba(225, 225, 225, 0.11);
+  text-shadow: -4px 3px 5px rgba(23, 17, 0, 0.75);
 }
 
 #fondo {
@@ -229,14 +227,22 @@ input[type="range"] {
 /*aside 2*/
 
 .aside-text {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
   padding: 10px;
+}
+.boxes-aside-text {
+  width: 100%;
+  margin: 10px;
 }
 .container-inputs-flex {
   display: flex;
-  margin: 20px 0px;}
+  margin: 20px 0px;
+}
 
-.check-text{
+.check-text {
   color: white;
 }
 
@@ -246,15 +252,15 @@ input[type="number"] {
   font-size: 18px;
   border-width: 10px;
   border-color: #626363;
-  background-color: #3f3f3f;
+  background-color: rgba(225, 225, 225, 0.11);
   color: #0e8696;
   border-style: hidden;
   border-radius: 50px;
-  box-shadow: 0px 0px 2px rgba(225,225,225,.11);
-  text-shadow: -4px 3px 5px rgba(23,17,0,.75);
+  box-shadow: 0px 0px 2px rgba(225, 225, 225, 0.11);
+  text-shadow: -4px 3px 5px rgba(23, 17, 0, 0.75);
 }
 
-.container-input-round-color{
+.container-input-round-color {
   margin-right: 15%;
 }
 
@@ -262,8 +268,8 @@ input[type="color"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
- width: 70px;
- height: 30px;
+  width: 70px;
+  height: 30px;
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -273,7 +279,6 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 15px;
   border: none;
 }
-
 
 /*---*/
 .colorHeader {
