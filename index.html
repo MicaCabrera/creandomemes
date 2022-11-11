@@ -1,285 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
-      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
-      integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/4c3802b9e6.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Document</title>
-  </head>
 
-  <body>
-    <!--Section con título y botones--->
-    <header>
-      <!-- <div class="container-logo"><img class="img-logo" src="imagenes/logopompeya-01.png" alt=""></div>--->
-      <h1>Generador de Memes</h1>
-      <div class="container-btn">
-        <div id="btn-one">
-          <i class="fa-solid fa-palette"></i>
-          <button>Imagen</button>
-        </div>
-        <div id="btn-two">
-          <i class="fa-solid fa-pencil"></i>
-          <button>Texto</button>
-        </div>
-        <div id="btn-three">
-          <i class="fa-solid fa-eye"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css" />
 
-          <button id="btn">Modo claro</button>
-        </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
+    integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://kit.fontawesome.com/4c3802b9e6.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!--Section con título y botones--->
+  <header>
+    <!-- <div class="container-logo"><img class="img-logo" src="imagenes/logopompeya-01.png" alt=""></div>--->
+    <h1>Generador de Memes</h1>
+    <div class="container-btn">
+      <div id="btn-one">
+        <i class="fa-solid fa-palette"></i>
+        <button>Imagen</button>
       </div>
-    </header>
+      <div id="btn-two">
+        <i class="fa-solid fa-pencil"></i>
+        <button>Texto</button>
+      </div>
+      <div id="btn-three">
+        <i class="fa-solid fa-eye"></i>
 
-    <div class="center-section">
-      <!--Segunda seccion Texto e Imagen--->
-      <section class="section-edition">
-        <div id="memeId" class="meme">
-          <p>TOP TEXT</p>
-
-          <div id="contain-img">
-            <img src="" alt="" id="img-meme" />
-          </div>
-
-          <p>BOTTOM TEXT</p>
-        </div>
-
-        <div class="download">
-          <button id="btn-download" class="colorButtons">
-            Descargá tu meme
-          </button>
-        </div>
-      </section>
+        <button id="btn">Modo claro</button>
+      </div>
     </div>
-    <!-- aside--->
+  </header>
 
-    <aside class="section-filters-url">
-      <h2>IMAGEN</h2>
+  <div class="center-section">
+    <!--Segunda seccion Texto e Imagen--->
+    <section class="section-edition">
+      <div id="memeId" class="meme">
+        <p>TOP TEXT</p>
+
+        <div id="contain-img">
+          <img src="" alt="" id="img-meme" />
+        </div>
+
+        <p>BOTTOM TEXT</p>
+      </div>
+
+      <div class="download">
+        <button id="btn-download" class="colorButtons">
+          Descargá tu meme
+        </button>
+      </div>
+    </section>
+  </div>
+  <!-- aside--->
+
+  <aside class="section-filters-url">
+    <h2>IMAGEN</h2>
+
+    <div>
+      <h3>URL</h3>
+      <input type="text" id="url" />
+    </div>
+    <!--fin div url-->
+
+    <div>
+      <h3>Fondo</h3>
+      <label for="color"></label>
+      <input type="color" id="color" name="color" />
+
+      <select name="select">
+        <option>Ninguno</option>
+        <option id="option-dos" value="clarify">Aclarar</option>
+        <option value="darken">Oscurecer</option>
+        <option value="difference">Diferencia</option>
+        <option value="shine">Luminocidad</option>
+        <option value="multiply">Multiplicar</option>
+      </select>
+    </div>
+    <!--fin div Fondo-->
+
+    <div>
+      <h3>Filtros</h3>
+
+      <div class="filters-flex">
+        <label for="brigthness">
+          <p>Brillo</p>
+        </label>
+        <input type="range" id="brigthness" min="0" max="1" value="1" step="0.1" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="opacityInput">
+          <p>Opacidad</p>
+        </label>
+        <input type="range" id="opacityInput" min="0" max="100" value="100" step="0.1" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="contraste">
+          <p>Contraste</p>
+        </label>
+        <input type="range" id="contraste" min="100" max="500" value="100" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="blur">
+          <p>Desenfoque</p>
+        </label>
+        <input type="range" id="blur" min="0" max="10" value="0" step="0.1" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="gray-scale">
+          <p>Escala de grises</p>
+        </label>
+        <input type="range" id="gray-scale" min="0" max="100" value="0" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="sepia">
+          <p>Sepia</p>
+        </label>
+        <input type="range" id="sepia" min="0" max="100" value="0" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="hue">
+          <p>Hue</p>
+        </label>
+        <input type="range" id="hue" min="0" max="360" value="0" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="saturate">
+          <p>Saturado</p>
+        </label>
+        <input type="range" id="saturate" min="0" max="200" value="100" />
+      </div>
+
+      <div class="filters-flex">
+        <label for="negative">
+          <p>Negativo</p>
+        </label>
+        <input type="range" id="negative" min="0" max="100" value="0" />
+      </div>
+
+      <div class="btn-aside-uno">
+        <button id="restart">Reestablecer filtros</button>
+      </div>
+    </div>
+  </aside>
+
+  <!--Aside dos-->
+  <aside class="aside-text">
+    <h2>TEXTO</h2>
+
+    <div class="boxes-aside-text">
+      <h3>Superior</h3>
+      <div>
+        <input type="text" id="superior-text" />
+        <label for="superior-text"></label>
+      </div>
+      <div>
+        <input type="checkbox" id="check-top" />
+        <label for="check-top" class="check-text">Sin texto superior</label>
+      </div>
+    </div>
+
+    <div class="boxes-aside-text">
+      <h3>Inferior</h3>
+      <div>
+        <input type="text" id="inferior-text" />
+        <label for="inferior-text"></label>
+      </div>
 
       <div>
-        <h3>URL</h3>
-        <input type="text" id="url" />
+        <input type="checkbox" id="check-bottom" />
+        <label for="check-bottom" class="check-text">Sin texto inferior</label>
       </div>
-      <!--fin div url-->
+    </div>
 
-      <div>
-        <h3>Fondo</h3>
-        <label for="color"></label>
-        <input type="color" id="color" name="color" />
-
-        <select name="select">
-          <option>Ninguno</option>
-          <option id="option-dos" value="clarify">Aclarar</option>
-          <option value="darken">Oscurecer</option>
-          <option value="difference">Diferencia</option>
-          <option value="shine">Luminocidad</option>
-          <option value="multiply">Multiplicar</option>
-        </select>
-      </div>
-      <!--fin div Fondo-->
-
-      <div>
-        <h3>Filtros</h3>
-
-        <div class="filters-flex">
-          <label for="brigthness">
-            <p>Brillo</p>
-          </label>
-          <input
-            type="range"
-            id="brigthness"
-            min="0"
-            max="1"
-            value="1"
-            step="0.1"
-          />
-        </div>
-
-        <div class="filters-flex">
-          <label for="opacityInput">
-            <p>Opacidad</p>
-          </label>
-          <input
-            type="range"
-            id="opacityInput"
-            min="0"
-            max="100"
-            value="100"
-            step="0.1"
-          />
-        </div>
-
-        <div class="filters-flex">
-          <label for="contraste">
-            <p>Contraste</p>
-          </label>
-          <input type="range" id="contraste" min="100" max="500" value="100" />
-        </div>
-
-        <div class="filters-flex">
-          <label for="blur">
-            <p>Desenfoque</p>
-          </label>
-          <input type="range" id="blur" min="0" max="10" value="0" step="0.1" />
-        </div>
-
-        <div class="filters-flex">
-          <label for="gray-scale">
-            <p>Escala de grises</p>
-          </label>
-          <input type="range" id="gray-scale" min="0" max="100" value="0" />
-        </div>
-
-        <div class="filters-flex">
-          <label for="sepia">
-            <p>Sepia</p>
-          </label>
-          <input type="range" id="sepia" min="0" max="100" value="0" />
-        </div>
-
-        <div class="filters-flex">
-          <label for="hue">
-            <p>Hue</p>
-          </label>
-          <input type="range" id="hue" min="0" max="360" value="0" />
-        </div>
-
-        <div class="filters-flex">
-          <label for="saturate">
-            <p>Saturado</p>
-          </label>
-          <input type="range" id="saturate" min="0" max="200" value="100" />
-        </div>
-
-        <div class="filters-flex">
-          <label for="negative">
-            <p>Negativo</p>
-          </label>
-          <input type="range" id="negative" min="0" max="100" value="0" />
-        </div>
-
-        <div class="btn-aside-uno">
-          <button id="restart">Reestablecer filtros</button>
-        </div>
-      </div>
-    </aside>
-
-    <!--Aside dos-->
-    <aside class="aside-text">
-      <h2>Texto</h2>
-
-      <div class="boxes-aside-text">
-        <h3>Superior</h3>
+    <div class="boxes-aside-text">
+      <h3>Fuente</h3>
+      <select name="select">
+        <option value="">Impact</option>
+        <option value="">Arial</option>
+        <option value="">Arial black</option>
+        <option value="">Amerian Typewriter</option>
+        <option value="">Andale Mono</option>
+        <option value="">Comic Sans MS</option>
+        <option value="">Helvetica</option>
+        <option value="">Impact</option>
+        <option value="">Verdana</option>
+        <option value="">Times New Roman</option>
+      </select>
+      <div class="input-btn-fonts">
         <div>
-          <input type="text" id="superior-text" />
-          <label for="superior-text"></label>
-        </div>
-        <div>
-          <input type="checkbox" id="check-top" />
-          <label for="check-top" class="check-text">Sin texto superior</label>
-        </div>
-      </div>
-
-      <div class="boxes-aside-text">
-        <h3>Inferior</h3>
-        <div>
-          <input type="text" id="inferior-text" />
-          <label for="inferior-text"></label>
-        </div>
-
-        <div>
-          <input type="checkbox" id="check-bottom" />
-          <label for="check-bottom" class="check-text"
-            >Sin texto inferior</label
-          >
-        </div>
-      </div>
-
-      <div class="boxes-aside-text">
-        <h3>Fuente</h3>
-        <select name="select">
-          <option value="">Impact</option>
-          <option value="">Arial</option>
-          <option value="">Arial black</option>
-          <option value="">Amerian Typewriter</option>
-          <option value="">Andale Mono</option>
-          <option value="">Comic Sans MS</option>
-          <option value="">Helvetica</option>
-          <option value="">Impact</option>
-          <option value="">Verdana</option>
-          <option value="">Times New Roman</option>
-        </select>
-        <div class="input-btn-fonts">
-          <div>
           <input type="number" id="numberFonts" />
           <label for="numberFonts"></label>
-          </div>
-          <div>
-           <button><i class=" i-align bi bi-text-left"></i></button>
-           <button><i class=" i-align bi bi-text-center"></i></button> 
-           <button><i class=" i-align bi bi-text-right"></i></button>
-          </div>
-         </div>
+        </div>
+        <div class="container-i-align">
+          <button><i class=" i-align bi bi-text-left"></i></button>
+          <button><i class=" i-align bi bi-text-center"></i></button>
+          <button><i class=" i-align bi bi-text-right"></i></button>
+        </div>
       </div>
+    </div>
 
-      <div class="boxes-aside-text">
-        <div class="container-inputs-flex">
-          <div class="container-input-round-color">
-            <h3>Color</h3>
-            <input id="input-color" type="color" />
-            <label for="input-color"></label>
-          </div>
+    <div class="boxes-aside-text">
+      <div class="container-inputs-flex">
 
-          <div>
-            <h3>Fondo</h3>
-            <input id="input-color-fondo" type="color" />
-            <label for="input-color-fondo"></label>
-          </div>
+        <div class="container-input-round-color">
+          <h3 class="h3-color-background">Color</h3>
+          <input id="input-color" type="color" />
+          <label for="input-color"></label>
         </div>
 
         <div>
-          <input type="checkbox" id="check-transparent" />
-          <label for="check-transparent" class="check-text"
-            >Fondo transparente</label>
+          <h3 class="h3-color-background">Fondo</h3>
+          <input id="input-color-fondo" type="color" value="" />
+          <label for="input-color-fondo"></label>
         </div>
       </div>
 
-      <div class="boxes-aside-text">
-        <h3>Contorno</h3>
-        <div>
-          <button>Ninguno</button>
-          <button>Claro</button>
-          <button>Oscuro</button>
-        </div>
-        </div>
+      <div>
+        <input type="checkbox" id="check-transparent" />
+        <label for="check-transparent" class="check-text">Fondo transparente</label>
       </div>
+    </div>
 
-<div class="boxes-aside-text">
+    <div class="boxes-aside-text">
+      <h3>Contorno</h3>
+      <div>
+        <button>Ninguno</button>
+        <button>Claro</button>
+        <button>Oscuro</button>
+      </div>
+    </div>
+    </div>
+
+    <div class="boxes-aside-text">
       <h3>Espaciado</h3>
       <input type="number" />
-</div>
+    </div>
 
-<div class="boxes-aside-text">
+    <div class="boxes-aside-text">
       <h3>Interlineado</h3>
       <input type="number" />
-    </aside>
-</div>
-    <script src="main.js"></script>
-  </body>
+  </aside>
+  </div>
+  <script src="main.js"></script>
+</body>
+
 </html>

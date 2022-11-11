@@ -276,19 +276,27 @@ input[type="number"] {
   background-color: rgba(94, 94, 94, 0.829);
 }
 
+.container-i-align{
+  margin-left: 10px;
+}
 .i-align {
   font-size: 20px;
 }
 
+.h3-color-background{
+  padding: 0;
+  margin-bottom: 4px;
+}
 .container-input-round-color {
-  margin-right: 15%;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 input[type="color"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 70px;
+  width: 30px;
   height: 30px;
   border: none;
   cursor: pointer;
@@ -296,7 +304,7 @@ input[type="color"] {
 }
 
 input[type="color"]::-webkit-color-swatch {
-  border-radius: 15px;
+  border-radius: 50%;
   border: none;
 }
 
