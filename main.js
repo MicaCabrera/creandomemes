@@ -114,5 +114,17 @@ btnDownload.addEventListener('click',downloadMemardo);
 
 //Aside dos
 
+ let superiorText = $("#superior-text"); 
+ let bottomText =$("#inferior-text");
  let topText = $("#top-text");
- console.log(topText);
+ let inferiorText = $("#bottom-text");
+
+
+
+superiorText.addEventListener("input", (event) => {
+  topText.innerText = event.target.value;
+ });
+
+ bottomText.addEventListener("input", (event) => {
+  inferiorText.innerText = event.target.value;
+ });
