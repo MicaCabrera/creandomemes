@@ -63,8 +63,6 @@ let changeFilters = () => {
   containImgMeme.style.filter = `brightness(${inputBrigthness.value}) contrast(${inputContrast.value}%) grayscale(${inputGrayScale.value}%)
   sepia(${inputSepia.value}%) hue-rotate(${inputHue.value}deg) saturate(${inputSaturate.value}%) invert(${inputNegative.value}%) opacity(${inputOpacity.value}%)
   blur(${inputBlur.value}px)`;
-
- 
 };
 
 inputBrigthness.addEventListener("change", changeFilters);
@@ -98,33 +96,51 @@ btnRestart.addEventListener("click", restartFilters);
 
 // descargar meme
 
-let memardo= $("#memeId");
+let memardo = $("#memeId");
 let btnDownload = $("#btn-download");
 
-const nameQuestion = () => prompt('Ponele un nombre a tu memaso:');
+const nameQuestion = () => prompt("Ponele un nombre a tu memaso:");
 
-const downloadMemardo =()=>{
-  domtoimage.toBlob(memardo).then(function(blob){
-  saveAs(blob, nameQuestion());
+const downloadMemardo = () => {
+  domtoimage.toBlob(memardo).then(function (blob) {
+    saveAs(blob, nameQuestion());
   });
 };
 
-btnDownload.addEventListener('click',downloadMemardo);
-
+btnDownload.addEventListener("click", downloadMemardo);
 
 //Aside dos
 
- let superiorText = $("#superior-text"); 
- let bottomText =$("#inferior-text");
- let topText = $("#top-text");
- let inferiorText = $("#bottom-text");
-
-
+let superiorText = $("#superior-text"); //input
+let bottomText = $("#inferior-text"); //input
+let topText = $("#top-text"); //p
+let inferiorText = $("#bottom-text");
 
 superiorText.addEventListener("input", (event) => {
   topText.innerText = event.target.value;
- });
+});
 
- bottomText.addEventListener("input", (event) => {
+bottomText.addEventListener("input", (event) => {
   inferiorText.innerText = event.target.value;
- });
+});
+
+//Checkbox
+
+let checkTextSuperior = $("#check-top");
+let checkTextInferior = $("#check-bottom");
+
+checkTextSuperior.addEventListener("click", (event) => {
+  if (checkTextSuperior.checked) {
+    topText.style.display = "none";
+  } else {
+    topText.style.display = "block";
+  }
+});
+
+checkTextInferior.addEventListener("click", (event)=> {
+  if(checkTextInferior.checked) {
+    inferiorText.style.display ="none";
+  } else {
+    inferiorText.style.display="block";
+  }
+})
