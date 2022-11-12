@@ -44,13 +44,13 @@
     <!--Segunda seccion Texto e Imagen--->
     <section class="section-edition">
       <div id="memeId" class="meme">
-        <p>TOP TEXT</p>
+        <p id="top-text">TOP TEXT</p>
 
         <div id="contain-img">
           <img src="" alt="" id="img-meme" />
         </div>
 
-        <p>BOTTOM TEXT</p>
+        <p id="bottom-text">BOTTOM TEXT</p>
       </div>
 
       <div class="download">
@@ -73,6 +73,7 @@
 
     <div>
       <h3>Fondo</h3>
+      <div class="container-inputcolor">
       <label for="color"></label>
       <input type="color" id="color" name="color" />
 
@@ -84,6 +85,7 @@
         <option value="shine">Luminocidad</option>
         <option value="multiply">Multiplicar</option>
       </select>
+    </div>
     </div>
     <!--fin div Fondo-->
 
@@ -208,9 +210,9 @@
           <label for="numberFonts"></label>
         </div>
         <div class="container-i-align">
-          <button><i class=" i-align bi bi-text-left"></i></button>
-          <button><i class=" i-align bi bi-text-center"></i></button>
-          <button><i class=" i-align bi bi-text-right"></i></button>
+          <button class="btn-align-style"><i class=" i-align bi bi-text-left"></i></button>
+          <button class="btn-align-style"><i class=" i-align bi bi-text-center"></i></button>
+          <button class="btn-align-style"><i class=" i-align bi bi-text-right"></i></button>
         </div>
       </div>
     </div>
@@ -226,7 +228,7 @@
 
         <div>
           <h3 class="h3-color-background">Fondo</h3>
-          <input id="input-color-fondo" type="color" value="" />
+          <input id="input-color-fondo" type="color"/>
           <label for="input-color-fondo"></label>
         </div>
       </div>
@@ -240,9 +242,9 @@
     <div class="boxes-aside-text">
       <h3>Contorno</h3>
       <div>
-        <button>Ninguno</button>
-        <button>Claro</button>
-        <button>Oscuro</button>
+        <button class="btn-outline-style">Ninguno</button>
+        <button class="btn-outline-style">Claro</button>
+        <button class="btn-outline-style">Oscuro</button>
       </div>
     </div>
     </div>

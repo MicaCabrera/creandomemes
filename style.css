@@ -159,13 +159,12 @@ h3 {
 input[type="text"] {
   padding: 6px;
   margin-bottom: 15px;
-  font-size: 18px;
   border-width: 10px;
   border-color: #626363;
   background-color: rgba(225, 225, 225, 0.11);
   color: #0e8696;
   border-style: hidden;
-  border-radius: 50px;
+  border-radius: 4px;
   box-shadow: 0px 0px 2px rgba(225, 225, 225, 0.11);
   text-shadow: -4px 3px 5px rgba(23, 17, 0, 0.75);
 }
@@ -176,6 +175,9 @@ input[type="text"] {
   background-color: transparent;
   border: none;
   padding: 5px 10px;
+}
+.container-inputcolor {
+  margin: 10px;
 }
 
 .filters-flex {
@@ -227,13 +229,16 @@ input[type="range"] {
 /*aside 2*/
 
 .aside-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: fit-content;
+  width: 20%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 10px;
   background-color: rgb(37, 41, 53);
-  padding: 10px;
+  overflow-y: scroll;
 }
+
 .boxes-aside-text {
   width: 100%;
   margin: 10px;
@@ -246,6 +251,13 @@ input[type="range"] {
 #numberFonts {
   width: 100px;
 }
+
+.btn-align-style {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
 .container-inputs-flex {
   display: flex;
 }
@@ -276,14 +288,14 @@ input[type="number"] {
   background-color: rgba(94, 94, 94, 0.829);
 }
 
-.container-i-align{
+.container-i-align {
   margin-left: 10px;
 }
 .i-align {
   font-size: 20px;
 }
 
-.h3-color-background{
+.h3-color-background {
   padding: 0;
   margin-bottom: 4px;
 }
@@ -308,6 +320,19 @@ input[type="color"]::-webkit-color-swatch {
   border: none;
 }
 
+.btn-outline-style {
+  padding: 6px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(225, 225, 225, 0.11);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-outline-style:hover {
+  background-color: rgba(225, 225, 225, 0.507);
+}
 /*---*/
 .colorHeader {
   background-color: rgb(224, 224, 224);

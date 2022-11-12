@@ -113,3 +113,6 @@ btnDownload.addEventListener('click',downloadMemardo);
 
 
 //Aside dos
+
+ let topText = $("#top-text");
+ console.log(topText);
