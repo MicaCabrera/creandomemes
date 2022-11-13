@@ -218,16 +218,39 @@ let btnRight = $("#btn-right");
 btnLeft.addEventListener("click", (event)=> {
   topText.style.textAlign = 'left';
   inferiorText.style.textAlign = 'left';
-})
+});
 
 btnCenter.addEventListener("click", (event)=> {
   topText.style.textAlign = 'center';
   inferiorText.style.textAlign = 'center';
-})
+});
 
 btnRight.addEventListener("click", (event)=> {
   topText.style.textAlign = 'right';
   inferiorText.style.textAlign = 'right';
-})
+});
 
 //fondo y color texto
+ 
+let colorText = $("#input-color-text");
+let colorBackText = $("#input-color-fondo");
+
+colorText.addEventListener("input", (event)=>{
+  const colorTextMeme = event.target.value
+  topText.style.color = colorTextMeme;
+  inferiorText.style.color = colorTextMeme;
+});
+
+colorBackText.addEventListener("input", (event)=>{
+  const colorBackgroundMeme = event.target.value
+  topText.style.backgroundColor = colorBackgroundMeme;
+  inferiorText.style.backgroundColor = colorBackgroundMeme;
+});
+
+//Fondo transparente
+
+let transparentBackground = ("#check-transparent");
+
+transparentBackground.addEventListener("click", (event)=> {
+console.log(transparentBackground.value);
+});
