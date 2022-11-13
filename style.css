@@ -252,7 +252,7 @@ input[type="range"] {
   display: flex;
   padding: 5px;
 }
-#numberFonts {
+#number-fonts {
   width: 100px;
 }
 
@@ -278,7 +278,15 @@ input[type="number"] {
   background-color: rgba(225, 225, 225, 0.11);
   border-style: hidden;
   border-radius: 4px;
+  
 }
+
+input[type="number"]:focus {
+  outline: none;
+  background-color: rgba(225, 225, 225, 0.507);
+}
+
+
 .boxes-aside-text select {
   padding: 6px;
   margin-bottom: 15px;

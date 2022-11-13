@@ -199,25 +199,14 @@ switch(indexFont) {
 }
 })
 
+//tamaño de fuente
 
+let sizeInput = $("#number-fonts");
 
+sizeInput.addEventListener("input", (event)=> {
+sizeFonts = event.target.value; 
+topText.style.fontSize  = `${sizeFonts}px`;
+inferiorText.style.fontSize = `${sizeFonts}px`;
+})
 
-
-//selecciona cada option
-
-//styleFonts();
-/*
-
-
-
-
-let styleFonts = () => {
-let optionFonrS = selectFont();  
-
-let optionFontS =  'Helvetica';
-console.log(optionFontS);
-};
-
-
-
-*/
+//posicion del texto
