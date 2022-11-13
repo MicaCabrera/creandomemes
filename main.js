@@ -142,19 +142,32 @@ checkTextInferior.addEventListener("click", (event)=> {
     inferiorText.style.display ="none";
   } else {
     inferiorText.style.display="block";
-  }
+  }main.js
 })
  //fuentes
-//let topText
+//let texto de arriba --> topText
 
 
-let selectOptions = $("#select-fonts");
-//console.log(selectOptions);
+let selectText= $("#select-fonts");
 
 
 
-selectOptions.addEventListener("change", (event)=> {
-let optionFontSelected = selectOptions.value;
-console.log(optionFontSelected);
+
+
+let styleFonts = () => {
+let helveticaFont = topText.style.fontFamily = 'Helvetica';
+};
+
+//styleFonts();
+
+
+
+//selecciona cada option
+let selectFont = () => {
+selectText.addEventListener("change", (event)=> {
+let optionFont= selectText.value;
+console.log(optionFont);
 })
+}
 
+//selectFont();
