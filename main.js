@@ -144,30 +144,74 @@ checkTextInferior.addEventListener("click", (event)=> {
     inferiorText.style.display="block";
   }main.js
 })
- //fuentes
-//let texto de arriba --> topText
 
+ //fuentes
 
 let selectText= $("#select-fonts");
 
+selectText.addEventListener("change", (event)=> {
+let indexFont = event.target.selectedIndex;
+
+switch(indexFont) {
+  case 0: 
+  topText.style.fontFamily = 'Impact';
+  inferiorText.style.fontFamily = 'Impact';
+  break;
+  case 1: 
+  topText.style.fontFamily = 'Arial';
+  inferiorText.style.fontFamily = 'Arial';
+  break;
+  case 2: 
+  topText.style.fontFamily = 'Arial Black';
+  inferiorText.style.fontFamily = 'Arial Black';
+  break;
+  case 3: 
+  topText.style.fontFamily = 'Amerian Typewriter';
+  inferiorText.style.fontFamily = 'Amerian Typewriter';
+  break;
+  case 4: 
+  topText.style.fontFamily = 'Andale Mono';
+  inferiorText.style.fontFamily = 'Andale Mono';
+  break;
+  case 5: 
+  topText.style.fontFamily = 'Comic Sans MS';
+  inferiorText.style.fontFamily = 'Comic Sans MS';
+  break;
+  case 6: 
+  topText.style.fontFamily = 'Helvetica';
+  inferiorText.style.fontFamily = 'Helvetica';
+  break;
+  case 7: 
+  topText.style.fontFamily = 'Verdana';
+  inferiorText.style.fontFamily = 'Verdana';
+  break;
+  case 1: 
+  topText.style.fontFamily = 'Times New Roman';
+  inferiorText.style.fontFamily = 'Times New Roman';
+  break;
+}
+
+})
+
+
+
+
+
+//selecciona cada option
+
+//styleFonts();
+/*
 
 
 
 
 let styleFonts = () => {
-let helveticaFont = topText.style.fontFamily = 'Helvetica';
+let optionFonrS = selectFont();  
+
+let optionFontS =  'Helvetica';
+console.log(optionFontS);
 };
 
-//styleFonts();
 
 
-
-//selecciona cada option
-let selectFont = () => {
-selectText.addEventListener("change", (event)=> {
-let optionFont= selectText.value;
-console.log(optionFont);
-})
-}
-
-//selectFont();
+*/
