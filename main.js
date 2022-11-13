@@ -144,3 +144,17 @@ checkTextInferior.addEventListener("click", (event)=> {
     inferiorText.style.display="block";
   }
 })
+ //fuentes
+//let topText
+
+
+let selectOptions = $("#select-fonts");
+//console.log(selectOptions);
+
+
+
+selectOptions.addEventListener("change", (event)=> {
+let optionFontSelected = selectOptions.value;
+console.log(optionFontSelected);
+})
+

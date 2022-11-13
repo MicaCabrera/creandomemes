@@ -69,13 +69,13 @@
       <h3>URL</h3>
       <input type="text" id="url" />
     </div>
-    <!--fin div url-->
-
+    
     <div>
       <h3>Fondo</h3>
       <div class="container-inputcolor">
       <label for="color"></label>
       <input type="color" id="color" name="color" />
+<!--fin div url
 
       <select name="select">
         <option>Ninguno</option>
@@ -86,7 +86,7 @@
         <option value="multiply">Multiplicar</option>
       </select>
     </div>
-    </div>
+    </div>-->
     <!--fin div Fondo-->
 
     <div>
@@ -192,18 +192,20 @@
 
     <div class="boxes-aside-text">
       <h3>Fuente</h3>
-      <select name="select">
-        <option value="">Impact</option>
-        <option value="">Arial</option>
-        <option value="">Arial black</option>
-        <option value="">Amerian Typewriter</option>
-        <option value="">Andale Mono</option>
-        <option value="">Comic Sans MS</option>
-        <option value="">Helvetica</option>
-        <option value="">Impact</option>
-        <option value="">Verdana</option>
-        <option value="">Times New Roman</option>
+      <form name="fonts">
+      <select id="select-fonts"name="fontfamilys">
+        <option value="impact">Impact</option>
+        <option value="arial">Arial</option>
+        <option value="arial-black">Arial black</option>
+        <option value="american">Amerian Typewriter</option>
+        <option value="mono">Andale Mono</option>
+        <option value="sans">Comic Sans MS</option>
+        <option value="helvetica">Helvetica</option>
+        <option value="Impact">Impact</option>
+        <option value="verdana">Verdana</option>
+        <option value="times">Times New Roman</option>
       </select>
+    </form>
       <div class="input-btn-fonts">
         <div>
           <input type="number" id="numberFonts" />
