@@ -147,11 +147,18 @@ checkTextInferior.addEventListener("click", (event)=> {
 
  //fuentes
 
+
+
 let selectText= $("#select-fonts");
+
+//x defecto
+topText.style.fontFamily = 'Impact';
+inferiorText.style.fontFamily = 'Impact';
 
 selectText.addEventListener("change", (event)=> {
 let indexFont = event.target.selectedIndex;
 
+console.log(indexFont);
 switch(indexFont) {
   case 0: 
   topText.style.fontFamily = 'Impact';
@@ -166,12 +173,12 @@ switch(indexFont) {
   inferiorText.style.fontFamily = 'Arial Black';
   break;
   case 3: 
-  topText.style.fontFamily = 'Amerian Typewriter';
-  inferiorText.style.fontFamily = 'Amerian Typewriter';
+  topText.style.fontFamily = 'American Typewriter';
+  inferiorText.style.fontFamily = 'American Typewriter';
   break;
   case 4: 
-  topText.style.fontFamily = 'Andale Mono';
-  inferiorText.style.fontFamily = 'Andale Mono';
+  topText.style.fontFamily = 'Andale Mono,AndaleMono,monospace';
+  inferiorText.style.fontFamily = 'Andale Mono,AndaleMono,monospace';
   break;
   case 5: 
   topText.style.fontFamily = 'Comic Sans MS';
@@ -185,12 +192,11 @@ switch(indexFont) {
   topText.style.fontFamily = 'Verdana';
   inferiorText.style.fontFamily = 'Verdana';
   break;
-  case 1: 
+  case 8: 
   topText.style.fontFamily = 'Times New Roman';
   inferiorText.style.fontFamily = 'Times New Roman';
   break;
 }
-
 })
 
 
