@@ -210,3 +210,24 @@ inferiorText.style.fontSize = `${sizeFonts}px`;
 })
 
 //posicion del texto
+
+let btnLeft = $("#btn-left");
+let btnCenter = $("#btn-center");
+let btnRight = $("#btn-right");
+
+btnLeft.addEventListener("click", (event)=> {
+  topText.style.textAlign = 'left';
+  inferiorText.style.textAlign = 'left';
+})
+
+btnCenter.addEventListener("click", (event)=> {
+  topText.style.textAlign = 'center';
+  inferiorText.style.textAlign = 'center';
+})
+
+btnRight.addEventListener("click", (event)=> {
+  topText.style.textAlign = 'right';
+  inferiorText.style.textAlign = 'right';
+})
+
+//fondo y color texto

@@ -98,7 +98,7 @@ header div div i {
 }
 .meme p {
   text-align: center;
-  padding: 18px 0px;
+  padding: 18px 10px;
   font-size: 30px;
 }
 
@@ -256,12 +256,6 @@ input[type="range"] {
   width: 100px;
 }
 
-.btn-align-style {
-  background-color: transparent;
-  color: white;
-  border: none;
-}
-
 .container-inputs-flex {
   display: flex;
 }
@@ -300,6 +294,17 @@ input[type="number"]:focus {
   background-color: rgba(94, 94, 94, 0.829);
 }
 
+.btn-align-style {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(225, 225, 225, 0.11);
+}
+
+.btn-align-style:hover {
+  background-color: rgba(225, 225, 225, 0.507);
+}
 .container-i-align {
   margin-left: 10px;
 }
