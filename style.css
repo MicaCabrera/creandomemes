@@ -79,7 +79,7 @@ header div div i {
 .meme {
   width: 80%;
   margin-top: 20px;
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(255, 255, 255);
 }
 
 #contain-img {
@@ -87,8 +87,9 @@ header div div i {
   justify-content: center;
   align-items: center;
   height: 300px;
-  background-color: rgb(15, 128, 143);
+  background-color: rgba(0, 0, 0, 0.89);
 }
+
 
 #img-meme {
   text-align: center;

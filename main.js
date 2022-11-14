@@ -137,77 +137,75 @@ checkTextSuperior.addEventListener("click", (event) => {
   }
 });
 
-checkTextInferior.addEventListener("click", (event)=> {
-  if(checkTextInferior.checked) {
-    inferiorText.style.display ="none";
+checkTextInferior.addEventListener("click", (event) => {
+  if (checkTextInferior.checked) {
+    inferiorText.style.display = "none";
   } else {
-    inferiorText.style.display="block";
-  }main.js
-})
+    inferiorText.style.display = "block";
+  }
+});
 
- //fuentes
+//fuentes
 
-
-
-let selectText= $("#select-fonts");
+let selectText = $("#select-fonts");
 
 //x defecto
-topText.style.fontFamily = 'Impact';
-inferiorText.style.fontFamily = 'Impact';
+topText.style.fontFamily = "Impact";
+inferiorText.style.fontFamily = "Impact";
 
-selectText.addEventListener("change", (event)=> {
-let indexFont = event.target.selectedIndex;
+selectText.addEventListener("change", (event) => {
+  let indexFont = event.target.selectedIndex;
 
-console.log(indexFont);
-switch(indexFont) {
-  case 0: 
-  topText.style.fontFamily = 'Impact';
-  inferiorText.style.fontFamily = 'Impact';
-  break;
-  case 1: 
-  topText.style.fontFamily = 'Arial';
-  inferiorText.style.fontFamily = 'Arial';
-  break;
-  case 2: 
-  topText.style.fontFamily = 'Arial Black';
-  inferiorText.style.fontFamily = 'Arial Black';
-  break;
-  case 3: 
-  topText.style.fontFamily = 'American Typewriter';
-  inferiorText.style.fontFamily = 'American Typewriter';
-  break;
-  case 4: 
-  topText.style.fontFamily = 'Andale Mono,AndaleMono,monospace';
-  inferiorText.style.fontFamily = 'Andale Mono,AndaleMono,monospace';
-  break;
-  case 5: 
-  topText.style.fontFamily = 'Comic Sans MS';
-  inferiorText.style.fontFamily = 'Comic Sans MS';
-  break;
-  case 6: 
-  topText.style.fontFamily = 'Helvetica';
-  inferiorText.style.fontFamily = 'Helvetica';
-  break;
-  case 7: 
-  topText.style.fontFamily = 'Verdana';
-  inferiorText.style.fontFamily = 'Verdana';
-  break;
-  case 8: 
-  topText.style.fontFamily = 'Times New Roman';
-  inferiorText.style.fontFamily = 'Times New Roman';
-  break;
-}
-})
+  console.log(indexFont);
+  switch (indexFont) {
+    case 0:
+      topText.style.fontFamily = "Impact";
+      inferiorText.style.fontFamily = "Impact";
+      break;
+    case 1:
+      topText.style.fontFamily = "Arial";
+      inferiorText.style.fontFamily = "Arial";
+      break;
+    case 2:
+      topText.style.fontFamily = "Arial Black";
+      inferiorText.style.fontFamily = "Arial Black";
+      break;
+    case 3:
+      topText.style.fontFamily = "American Typewriter";
+      inferiorText.style.fontFamily = "American Typewriter";
+      break;
+    case 4:
+      topText.style.fontFamily = "Andale Mono,AndaleMono,monospace";
+      inferiorText.style.fontFamily = "Andale Mono,AndaleMono,monospace";
+      break;
+    case 5:
+      topText.style.fontFamily = "Comic Sans MS";
+      inferiorText.style.fontFamily = "Comic Sans MS";
+      break;
+    case 6:
+      topText.style.fontFamily = "Helvetica";
+      inferiorText.style.fontFamily = "Helvetica";
+      break;
+    case 7:
+      topText.style.fontFamily = "Verdana";
+      inferiorText.style.fontFamily = "Verdana";
+      break;
+    case 8:
+      topText.style.fontFamily = "Times New Roman";
+      inferiorText.style.fontFamily = "Times New Roman";
+      break;
+  }
+});
 
 //tamaño de fuente
 
 let sizeInput = $("#number-fonts");
 
-sizeInput.addEventListener("input", (event)=> {
-sizeFonts = event.target.value; 
-topText.style.fontSize  = `${sizeFonts}px`;
-inferiorText.style.fontSize = `${sizeFonts}px`;
-})
+sizeInput.addEventListener("input", (event) => {
+  sizeFonts = event.target.value;
+  topText.style.fontSize = `${sizeFonts}px`;
+  inferiorText.style.fontSize = `${sizeFonts}px`;
+});
 
 //posicion del texto
 
@@ -215,42 +213,51 @@ let btnLeft = $("#btn-left");
 let btnCenter = $("#btn-center");
 let btnRight = $("#btn-right");
 
-btnLeft.addEventListener("click", (event)=> {
-  topText.style.textAlign = 'left';
-  inferiorText.style.textAlign = 'left';
+btnLeft.addEventListener("click", (event) => {
+  topText.style.textAlign = "left";
+  inferiorText.style.textAlign = "left";
 });
 
-btnCenter.addEventListener("click", (event)=> {
-  topText.style.textAlign = 'center';
-  inferiorText.style.textAlign = 'center';
+btnCenter.addEventListener("click", (event) => {
+  topText.style.textAlign = "center";
+  inferiorText.style.textAlign = "center";
 });
 
-btnRight.addEventListener("click", (event)=> {
-  topText.style.textAlign = 'right';
-  inferiorText.style.textAlign = 'right';
+btnRight.addEventListener("click", (event) => {
+  topText.style.textAlign = "right";
+  inferiorText.style.textAlign = "right";
 });
 
 //fondo y color texto
- 
+
+let backgroundTxt = $(".container-text-top");
+let backgroundTxtB = $(".container-text-bottom");
 let colorText = $("#input-color-text");
 let colorBackText = $("#input-color-fondo");
 
-colorText.addEventListener("input", (event)=>{
-  const colorTextMeme = event.target.value
+const colorTextChange = (event) => {
+  const colorTextMeme = event.target.value;
   topText.style.color = colorTextMeme;
   inferiorText.style.color = colorTextMeme;
-});
+};
 
-colorBackText.addEventListener("input", (event)=>{
-  const colorBackgroundMeme = event.target.value
-  topText.style.backgroundColor = colorBackgroundMeme;
-  inferiorText.style.backgroundColor = colorBackgroundMeme;
-});
+const backgroundColorText = (event) => {
+  const colorBackgroundMeme = event.target.value;
+  backgroundTxt.style.backgroundColor = colorBackgroundMeme;
+  backgroundTxtB.style.backgroundColor = colorBackgroundMeme;
+};
+
+colorText.addEventListener("input", colorTextChange);
+colorBackText.addEventListener("input", backgroundColorText);
 
 //Fondo transparente
 
-let transparentBackground = ("#check-transparent");
+let transparentBackground = $("#check-transparent");
 
-transparentBackground.addEventListener("click", (event)=> {
-console.log(transparentBackground.value);
+transparentBackground.addEventListener("click", (event) => {
+  if (transparentBackground.checked) {
+    backgroundTxt.style.backgroundColor = "transparent";
+    backgroundTxtB.style.backgroundColor = "transparent";
+  }
+  else {backgroundColorText(event);}
 });
