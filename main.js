@@ -254,10 +254,32 @@ colorBackText.addEventListener("input", backgroundColorText);
 
 let transparentBackground = $("#check-transparent");
 
-transparentBackground.addEventListener("click", (event) => {
-  if (transparentBackground.checked) {
+
+transparentBackground.addEventListener("click", (event)=> {
+  if(transparentBackground.checked) {
+  console.log('marcado'); 
     backgroundTxt.style.backgroundColor = "transparent";
     backgroundTxtB.style.backgroundColor = "transparent";
-  }
-  else {backgroundColorText(event);}
+  } 
 });
+
+// contorno //top text inferioText
+
+const outlineNone = $("#btn-outline-none");
+const outlineLight = $("#btn-outline-light");
+const outlineDark= $("#btn-outline-dark");
+
+outlineDark.addEventListener("click", (event)=>{
+  topText.style.textShadow = "3px 3px";
+})
+
+outlineLight.addEventListener("click", (event)=>{
+  topText.style.textShadow = "2px 2px";
+})
+
+outlineNone.addEventListener("click", (event)=>{
+  topText.style.textShadow = "0px 0px";
+})
+
+
+//Espaciado
