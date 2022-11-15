@@ -64,10 +64,10 @@ header div div i {
 /*-------- Section foto---------- */
 .center-section {
   height: 550px; /*no lo tenia*/
- /* background-color: green;*/
+  /* background-color: green;*/
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 .section-edition {
@@ -85,7 +85,7 @@ header div div i {
   width: 80%;
   margin-top: 20px;
   background-color: rgb(255, 255, 255);
- /*background-color: blue;*/
+  /*background-color: blue;*/
 }
 
 #contain-img {
@@ -94,7 +94,7 @@ header div div i {
   align-items: center;
   height: 350px;
   background-color: rgba(0, 0, 0, 0.89);
- /*background-color: pink;*/
+  /*background-color: pink;*/
 }
 
 #img-meme {
@@ -103,8 +103,9 @@ header div div i {
   max-height: 300px;
   background-color: black;
 }
-.spacing-text-sup, .spacing-text-inf{
- /* background-color: violet;*/
+.spacing-text-sup,
+.spacing-text-inf {
+  /* background-color: violet;*/
   padding: 20px;
   word-wrap: break-word;
 }
@@ -285,14 +286,12 @@ input[type="number"] {
   background-color: rgba(225, 225, 225, 0.11);
   border-style: hidden;
   border-radius: 4px;
-  
 }
 
 input[type="number"]:focus {
   outline: none;
   background-color: rgba(225, 225, 225, 0.507);
 }
-
 
 .boxes-aside-text select {
   padding: 6px;
@@ -393,4 +392,7 @@ input[type="color"]::-webkit-color-swatch {
   color: rgb(66, 66, 66);
 }
 
+.change-aside {
+  display: none;
+}
 /*--------------------------*/

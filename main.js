@@ -304,9 +304,28 @@ spacingInput.addEventListener("input", (event) => {
 const lineSpacingInput = $("#line-spacing");
 
 const lineSpacing = () => {
-  valueSpacingInput = lineSpacingInput.value;
   topText.style.lineHeight = lineSpacingInput.value;
   inferiorText.style.lineHeight = lineSpacingInput.value;
 };
 
 lineSpacingInput.addEventListener("change", lineSpacing);
+
+// aside cambio
+
+const btnAsideImg = $("#btn-aside-img");
+const btnAsideTxt = $("#btn-aside-txt");
+let asideImg = $(".section-filters-url");
+let asideTxt = $(".aside-text");
+
+const changeAsideImg = () => {
+  asideTxt.classList.add("change-aside");
+  asideImg.classList.remove("change-aside");
+};
+
+const changeAsideTxt = () => {
+  asideImg.classList.add("change-aside");
+  asideTxt.classList.remove("change-aside");
+};
+
+btnAsideImg.addEventListener("click", changeAsideImg);
+btnAsideTxt.addEventListener("click", changeAsideTxt);
