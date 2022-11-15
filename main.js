@@ -1,5 +1,5 @@
 const $ = (selector) => document.querySelector(selector);
-
+const $$ = (selector) => document.querySelectorAll(selector);
 //variables
 
 let btnMode = $("#btn");
@@ -271,15 +271,46 @@ const outlineDark= $("#btn-outline-dark");
 
 outlineDark.addEventListener("click", (event)=>{
   topText.style.textShadow = "3px 3px";
+  inferiorText.style.textShadow = "3px 3px";
 })
 
 outlineLight.addEventListener("click", (event)=>{
   topText.style.textShadow = "2px 2px";
+  inferiorText.style.textShadow = "2px 2px";
 })
 
 outlineNone.addEventListener("click", (event)=>{
   topText.style.textShadow = "0px 0px";
+  inferiorText.style.textShadow = "0px 0px";
 })
 
 
-//Espaciado
+//Espaciado 
+
+let paddingTextSup = $(".spacing-text-sup");
+let paddingTextInf= $(".spacing-text-inf")
+const spacingInput = $("#spacing-input");
+
+spacingInput.addEventListener("input", (event)=> {
+  let valueInput = spacingInput.value
+  paddingTextSup.style.padding = `${valueInput}px`;
+})
+
+spacingInput.addEventListener("input", (event)=> {
+  let valueInput = spacingInput.value
+  paddingTextInf.style.padding = `${valueInput}px`;
+})
+    
+  
+//Interlineado
+
+
+const lineSpacingInput = $("#line-spacing");
+
+const lineSpacing = () => {
+valueSpacingInput = lineSpacingInput.value;
+topText.style.lineHeight = lineSpacingInput.value;
+inferiorText.style.lineHeight = lineSpacingInput.value;
+}
+
+lineSpacingInput.addEventListener("change", lineSpacing);

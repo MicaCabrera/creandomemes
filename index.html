@@ -45,13 +45,13 @@
     <section class="section-edition">
       
       <div id="memeId" class="meme">
-        <div class="container-text-top">
-        <p id="top-text">TOP TEXT</p>
+        <div class="spacing-text-sup" class="container-text-top">
+        <p id="top-text">TOP TEXT </p>
       </div>
         <div id="contain-img">
           <img src="" alt="" id="img-meme" />
         </div>
-        <div class="container-text-bottom">
+        <div class="spacing-text-inf" class="container-text-bottom">
         <p id="bottom-text">BOTTOM TEXT</p>
       </div>
       </div>
@@ -171,7 +171,7 @@
     <div class="boxes-aside-text">
       <h3>Superior</h3>
       <div>
-        <input type="text" id="superior-text" value="TOP TEXT" />
+        <input type="text" id="superior-text" value="TOP TEXT"  maxlength="60" />
         <label for="superior-text"></label>
       </div>
       <div>
@@ -257,12 +257,19 @@
 
     <div class="boxes-aside-text">
       <h3>Espaciado</h3>
-      <input type="number" />
+      <input id="spacing-input" type="number" min="1" max="12" />
     </div>
 
     <div class="boxes-aside-text">
       <h3>Interlineado</h3>
-      <input type="number" />
+      <select name="" id="line-spacing">
+          <option value="0.8">0.8</option>
+          <option value="1">1</option>
+          <option value="1.2">1.2</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2</option>
+          <option value="2.5">2.5</option>
+      </select>
   </aside>
   </div>
   <script src="main.js"></script>
