@@ -10,6 +10,7 @@ body {
   background-color: rgb(48, 52, 63);
 }
 
+/*
 .container-logo {
   width: 100px;
 }
@@ -17,6 +18,7 @@ body {
 .img-logo {
   width: 100%;
 }
+*/
 
 h1 {
   padding: 20px;
@@ -33,6 +35,13 @@ header {
   background-color: rgb(25, 30, 43);
 }
 
+.container-btn {
+  width: 400px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 header button {
   margin: 2px;
   font-size: 15px;
@@ -40,13 +49,6 @@ header button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.container-btn {
-  width: 400px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 .container-btn div {
@@ -61,35 +63,39 @@ header div div i {
 
 /*-------- Section foto---------- */
 .center-section {
+  height: 550px; /*no lo tenia*/
+ /* background-color: green;*/
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
 }
 
 .section-edition {
   width: 50%;
-  height: 500px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(48, 52, 63);
+  /*background-color: yellow;*/
 }
 
 .meme {
   width: 80%;
   margin-top: 20px;
   background-color: rgb(255, 255, 255);
+ /*background-color: blue;*/
 }
 
 #contain-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 350px;
   background-color: rgba(0, 0, 0, 0.89);
+ /*background-color: pink;*/
 }
-
 
 #img-meme {
   text-align: center;
@@ -97,17 +103,22 @@ header div div i {
   max-height: 300px;
   background-color: black;
 }
+.spacing-text-sup, .spacing-text-inf{
+ /* background-color: violet;*/
+  padding: 20px;
+  word-wrap: break-word;
+}
 
 .meme p {
   text-align: center;
-  padding: 10px 10px;
   font-size: 30px;
+  /*background-color: red;*/
 }
 
 .download {
   text-align: center;
   width: 180px;
-  padding: 5px;
+  padding: 0px;
   margin: 20px;
 }
 

@@ -230,8 +230,8 @@ btnRight.addEventListener("click", (event) => {
 
 //fondo y color texto
 
-let backgroundTxt = $(".container-text-top");
-let backgroundTxtB = $(".container-text-bottom");
+let backgroundTxt = $(".spacing-text-sup");
+let backgroundTxtB = $(".spacing-text-inf");
 let colorText = $("#input-color-text");
 let colorBackText = $("#input-color-fondo");
 
@@ -254,63 +254,59 @@ colorBackText.addEventListener("input", backgroundColorText);
 
 let transparentBackground = $("#check-transparent");
 
-
-transparentBackground.addEventListener("click", (event)=> {
-  if(transparentBackground.checked) {
-  console.log('marcado'); 
+transparentBackground.addEventListener("click", (event) => {
+  if (transparentBackground.checked) {
+    console.log("marcado");
     backgroundTxt.style.backgroundColor = "transparent";
     backgroundTxtB.style.backgroundColor = "transparent";
-  } 
+  }
 });
 
 // contorno //top text inferioText
 
 const outlineNone = $("#btn-outline-none");
 const outlineLight = $("#btn-outline-light");
-const outlineDark= $("#btn-outline-dark");
+const outlineDark = $("#btn-outline-dark");
 
-outlineDark.addEventListener("click", (event)=>{
+outlineDark.addEventListener("click", (event) => {
   topText.style.textShadow = "3px 3px";
   inferiorText.style.textShadow = "3px 3px";
-})
+});
 
-outlineLight.addEventListener("click", (event)=>{
+outlineLight.addEventListener("click", (event) => {
   topText.style.textShadow = "2px 2px";
   inferiorText.style.textShadow = "2px 2px";
-})
+});
 
-outlineNone.addEventListener("click", (event)=>{
+outlineNone.addEventListener("click", (event) => {
   topText.style.textShadow = "0px 0px";
   inferiorText.style.textShadow = "0px 0px";
-})
+});
 
-
-//Espaciado 
+//Espaciado
 
 let paddingTextSup = $(".spacing-text-sup");
-let paddingTextInf= $(".spacing-text-inf")
+let paddingTextInf = $(".spacing-text-inf");
 const spacingInput = $("#spacing-input");
 
-spacingInput.addEventListener("input", (event)=> {
-  let valueInput = spacingInput.value
+spacingInput.addEventListener("input", (event) => {
+  let valueInput = spacingInput.value;
   paddingTextSup.style.padding = `${valueInput}px`;
-})
+});
 
-spacingInput.addEventListener("input", (event)=> {
-  let valueInput = spacingInput.value
+spacingInput.addEventListener("input", (event) => {
+  let valueInput = spacingInput.value;
   paddingTextInf.style.padding = `${valueInput}px`;
-})
-    
-  
-//Interlineado
+});
 
+//Interlineado
 
 const lineSpacingInput = $("#line-spacing");
 
 const lineSpacing = () => {
-valueSpacingInput = lineSpacingInput.value;
-topText.style.lineHeight = lineSpacingInput.value;
-inferiorText.style.lineHeight = lineSpacingInput.value;
-}
+  valueSpacingInput = lineSpacingInput.value;
+  topText.style.lineHeight = lineSpacingInput.value;
+  inferiorText.style.lineHeight = lineSpacingInput.value;
+};
 
 lineSpacingInput.addEventListener("change", lineSpacing);
