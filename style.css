@@ -8,6 +8,7 @@
 
 body {
   background-color: rgb(48, 52, 63);
+  background-image: url("imagenes/fondo1.jpg");
 }
 
 /*
@@ -77,12 +78,11 @@ header div div i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(48, 52, 63);
   /*background-color: yellow;*/
 }
 
 .meme {
-  width: 80%;
+  width: 70%;
   margin-top: 20px;
   background-color: rgb(255, 255, 255);
   /*background-color: blue;*/
@@ -92,7 +92,7 @@ header div div i {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 350px; 
   background-color: rgba(0, 0, 0, 0.89);
   /*background-color: pink;*/
 }
@@ -100,13 +100,13 @@ header div div i {
 #img-meme {
   text-align: center;
   width: 100%;
-  max-height: 300px;
+  max-height: 350px;
   background-color: black;
 }
 .spacing-text-sup,
 .spacing-text-inf {
   /* background-color: violet;*/
-  padding: 20px;
+  padding: 15px;
   word-wrap: break-word;
 }
 
@@ -121,6 +121,7 @@ header div div i {
   width: 180px;
   padding: 0px;
   margin: 20px;
+  background-color: black;
 }
 
 .download:hover {
@@ -254,7 +255,7 @@ input[type="range"] {
   right: 0;
   padding: 20px 10px;
   background-color: rgb(37, 41, 53);
-  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .boxes-aside-text {

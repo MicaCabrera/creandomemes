@@ -2,29 +2,6 @@ const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 //variables
 
-let btnMode = $("#btn");
-let header = $("header");
-let backgroundSection = $(".section-edition");
-let body = $("body");
-let aside = $("aside");
-let btnDown = $(".download");
-let btnReset = $(".btn-aside-uno");
-
-//eventos
-btnMode.addEventListener("click", function () {
-  header.classList.toggle("colorHeader");
-  backgroundSection.classList.toggle("colorBack");
-  body.classList.toggle("colorBack");
-  aside.classList.toggle("colorAside");
-  btnReset.classList.toggle("colorButtons");
-  btnDown.classList.toggle("colorButtons");
-
-  const nodeList = document.querySelectorAll("h1, h2, h3, p, button, i");
-  for (let i = 0; i < nodeList.length; i++) {
-    nodeList[i].classList.toggle("colorDark");
-  }
-});
-
 //-----
 
 let linkUrl = $("#url");
@@ -234,17 +211,29 @@ let backgroundTxt = $(".spacing-text-sup");
 let backgroundTxtB = $(".spacing-text-inf");
 let colorText = $("#input-color-text");
 let colorBackText = $("#input-color-fondo");
+let hexaColor = $(".hexa-color-text");
+let hexaBack = $(".hexa-color-back");
+
+let hexaValueColor = colorText.value;
+hexaColor.innerHTML = `${hexaValueColor}`;
+
+let hexaValueBack = colorBackText.value;
+hexaBack.innerHTML = `${hexaValueBack}`;
 
 const colorTextChange = (event) => {
   const colorTextMeme = event.target.value;
   topText.style.color = colorTextMeme;
   inferiorText.style.color = colorTextMeme;
+  hexaValueColor = colorTextMeme;
+  hexaColor.innerHTML = `${hexaValueColor}`;
 };
 
 const backgroundColorText = (event) => {
   const colorBackgroundMeme = event.target.value;
   backgroundTxt.style.backgroundColor = colorBackgroundMeme;
   backgroundTxtB.style.backgroundColor = colorBackgroundMeme;
+  hexaValueBack = colorBackgroundMeme;
+  hexaBack.innerHTML = `${hexaValueBack}`;
 };
 
 colorText.addEventListener("input", colorTextChange);
@@ -329,3 +318,28 @@ const changeAsideTxt = () => {
 
 btnAsideImg.addEventListener("click", changeAsideImg);
 btnAsideTxt.addEventListener("click", changeAsideTxt);
+// modo claro modo oscuro
+
+/*
+let btnMode = $("#btn");
+let header = $("header");
+let backgroundSection = $(".section-edition");
+let body = $("body");
+let aside = $("aside");
+let btnDown = $(".download");
+let btnReset = $(".btn-aside-uno");
+
+//eventos
+btnMode.addEventListener("click", function () {
+  header.classList.toggle("colorHeader");
+  backgroundSection.classList.toggle("colorBack");
+  body.classList.toggle("colorBack");
+  aside.classList.toggle("colorAside");
+  btnReset.classList.toggle("colorButtons");
+  btnDown.classList.toggle("colorButtons");
+
+  const nodeList = document.querySelectorAll("h1, h2, h3, p, button, i");
+  for (let i = 0; i < nodeList.length; i++) {
+    nodeList[i].classList.toggle("colorDark");
+  }
+});*/
