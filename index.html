@@ -77,11 +77,14 @@
     <div>
       <h3>Fondo</h3>
       <div class="container-inputcolor">
+      <div class="container-color-input-img">
       <label for="color"></label>
-      <input type="color" id="color" name="color" />
+      <input type="color" id="color" name="color" value="#000000"/>
+      <div class="hexa-color-background"></div>
+      </div>    
 
 
-      <select name="select">
+      <select name="select" class="style-select">
         <option>Ninguno</option>
         <option id="option-dos" value="clarify">Aclarar</option>
         <option value="darken">Oscurecer</option>
@@ -227,14 +230,14 @@
     <div class="boxes-aside-text">
       <div class="container-inputs-flex">
 
-        <div class="container-input-round-color">
+        <div class="container-input-round-color-back">
           <h3 class="h3-color-background">Color</h3>
           <input id="input-color-text" type="color" value="#000000"/>
           <label for="input-color-text"></label>
           <div class="hexa-color-text"></div>
         </div>
 
-        <div>
+        <div class="container-input-round-color-back">
           <h3 class="h3-color-background">Fondo</h3>
           <input id="input-color-fondo" type="color" value="#000000"/>
           <label for="input-color-fondo"></label>

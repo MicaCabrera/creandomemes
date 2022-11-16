@@ -196,7 +196,43 @@ input[type="text"]:focus {
   padding: 5px 10px;
 }
 .container-inputcolor {
-  margin: 10px;
+  padding: 6px;
+  margin: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.style-select {
+  padding: 8px;
+  width: 50%;
+  border-color: #626363;
+  background-color: rgba(225, 225, 225, 0.11);
+  border-style: hidden;
+  border-radius: 4px;
+  color: white;
+}
+
+.style-select option {
+  background-color: rgba(94, 94, 94, 0.829);
+}
+.style-select:focus {
+  outline: none;
+}
+
+.style-select:active {
+  background-color: rgba(225, 225, 225, 0.11);
+}
+
+.container-color-input-img{
+  display: flex;
+  align-items: center;
+  width: 100px;
+  padding: 2px;
+  border-radius: 4px;
+  background-color: rgba(225, 225, 225, 0.11);
+
 }
 
 .filters-flex {
@@ -337,10 +373,12 @@ input[type="number"]:focus {
   padding: 0;
   margin-bottom: 4px;
 }
-.container-input-round-color {
-  margin-right: 15px;
-  margin-bottom: 15px;
-}
+.container-input-round-color-back {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 10px;
+margin-right: 30px;}
 
 input[type="color"] {
   -webkit-appearance: none;
@@ -357,7 +395,12 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 50%;
   border: none;
 }
-
+.hexa-color-text, .hexa-color-back {
+  padding: 6px;
+  margin-bottom: 4px;
+  color: white;
+  font-size: 15px;
+}
 .btn-outline-style {
   padding: 6px;
   color: white;

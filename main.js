@@ -17,10 +17,15 @@ linkUrl.addEventListener("input", (event) => {
 
 let inputColor = $("#color");
 let backgroundMeme = $("#contain-img");
+let hexaBackImg = $(".hexa-color-background"); //div vacio
+let inputColorValue = inputColor.value;
+hexaBackImg.innerHTML = `${inputColorValue}`;
 
 inputColor.addEventListener("change", (event) => {
   let color = event.target.value;
   backgroundMeme.style.backgroundColor = color;
+  inputColorValue = color;
+  hexaBackImg.innerHTML = `${inputColorValue}`;
 });
 
 // filtros
