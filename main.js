@@ -323,7 +323,29 @@ const changeAsideTxt = () => {
 
 btnAsideImg.addEventListener("click", changeAsideImg);
 btnAsideTxt.addEventListener("click", changeAsideTxt);
+
 // modo claro modo oscuro
+
+const btnMode = $("#btn-dark-light");
+const bodyStyle = $("body");
+const headerStyle = $("header");
+const checkBox = $(".check-text");
+
+const lightMode = (event) => {
+  bodyStyle.classList.toggle("lightModeBody");
+  headerStyle.classList.toggle("lighModeHeader");
+  asideImg.classList.toggle("lightModeAside");
+  asideTxt.classList.toggle("lightModeAside");
+
+  const nodeList = document.querySelectorAll("h1, h2, h3");
+  for (let i = 0; i < nodeList.length; i++) {
+    nodeList[i].classList.toggle("ligthModeFont");
+  }
+
+  btnMode.innerHTML = "Modo oscuro";
+};
+
+btnMode.addEventListener("click", lightMode);
 
 /*
 let btnMode = $("#btn");
