@@ -1,12 +1,9 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
-//variables
 
-//-----
 
 let linkUrl = $("#url");
 let putImage = $("#img-meme");
-//console.log(putImage.src);
 
 linkUrl.addEventListener("input", (event) => {
   let imageSrc = event.target.value;
@@ -17,7 +14,7 @@ linkUrl.addEventListener("input", (event) => {
 
 let inputColor = $("#color");
 let backgroundMeme = $("#contain-img");
-let hexaBackImg = $(".hexa-color-background"); //div vacio
+let hexaBackImg = $(".hexa-color-background"); 
 let inputColorValue = inputColor.value;
 hexaBackImg.innerHTML = `${inputColorValue}`;
 
@@ -93,9 +90,9 @@ btnDownload.addEventListener("click", downloadMemardo);
 
 //Aside dos
 
-let superiorText = $("#superior-text"); //input
-let bottomText = $("#inferior-text"); //input
-let topText = $("#top-text"); //p
+let superiorText = $("#superior-text"); 
+let bottomText = $("#inferior-text"); 
+let topText = $("#top-text"); 
 let inferiorText = $("#bottom-text");
 
 superiorText.addEventListener("input", (event) => {
@@ -341,32 +338,6 @@ const lightMode = (event) => {
   for (let i = 0; i < nodeList.length; i++) {
     nodeList[i].classList.toggle("ligthModeFont");
   }
-
-  btnMode.innerHTML = "Modo oscuro";
 };
 
 btnMode.addEventListener("click", lightMode);
-
-/*
-let btnMode = $("#btn");
-let header = $("header");
-let backgroundSection = $(".section-edition");
-let body = $("body");
-let aside = $("aside");
-let btnDown = $(".download");
-let btnReset = $(".btn-aside-uno");
-
-//eventos
-btnMode.addEventListener("click", function () {
-  header.classList.toggle("colorHeader");
-  backgroundSection.classList.toggle("colorBack");
-  body.classList.toggle("colorBack");
-  aside.classList.toggle("colorAside");
-  btnReset.classList.toggle("colorButtons");
-  btnDown.classList.toggle("colorButtons");
-
-  const nodeList = document.querySelectorAll("h1, h2, h3, p, button, i");
-  for (let i = 0; i < nodeList.length; i++) {
-    nodeList[i].classList.toggle("colorDark");
-  }
-});*/
