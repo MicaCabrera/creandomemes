@@ -214,7 +214,7 @@ let backgroundTxtB = $(".spacing-text-inf");
 let colorText = $("#input-color-text");
 let colorBackText = $("#input-color-fondo");
 let hexaColor = $(".hexa-color-text");
-let hexaBack = $(".hexa-color-back");
+let hexaBack = $(".hexa-color-back"); //Div vacio
 
 let hexaValueColor = colorText.value;
 hexaColor.innerHTML = `${hexaValueColor}`;
@@ -250,6 +250,9 @@ transparentBackground.addEventListener("click", (event) => {
     console.log("marcado");
     backgroundTxt.style.backgroundColor = "transparent";
     backgroundTxtB.style.backgroundColor = "transparent";
+  } else {
+    backgroundTxt.style.backgroundColor = colorBackText.value;
+    backgroundTxtB.style.backgroundColor = colorBackText.value;
   }
 });
 
